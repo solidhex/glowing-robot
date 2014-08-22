@@ -10,5 +10,4 @@ The assets folder houses the Sass, CSS, JS, images and fonts. The config.rb comp
 
 I shamelessly ripped this off from CSS Tricks http://css-tricks.com/compass-compiling-and-wordpress-themes/.
 
-
-
+In the `assets/js/main.js` file, I'm pre-pending dependencies, utilities, plugins and libaries into the main.js file, then concatening and minifying the output to assets/js/dis/main.min.js.
