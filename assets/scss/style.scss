@@ -21,7 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "compass/css3";
 
 /**
-* Import Variables
+* Set Variables
 */
 
 // see use of default: http://robots.thoughtbot.com/sass-default
@@ -35,12 +35,24 @@ $link-color: #6495ED !default;
 @import "typography/roboto";
 
 /**
+* Import Placeholders
+*/
+
+@import "placeholders";
+
+/**
+* Import Partials
+*/
+
+@import "partials/header";
+
+/**
 * General Selectors
 */
 
 body {
 	background-color: #F5F5F5;
-	color: #555;
+	color: #241720;
 	font: 12px/18px 'roboto', Arial, sans-serif;
 }
 
@@ -90,4 +102,9 @@ a {
 #container {
 	margin: 0 auto;
 	width: 980px;
+}
+
+.slider {
+	background-color: #fff;
+	@extend %frame;
 }

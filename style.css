@@ -71,7 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /**
-* Import Variables
+* Set Variables
 */
 /**
 * Import Typography
@@ -98,57 +98,111 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal; }
 
 /**
+* Import Placeholders
+*/
+/* line 1, ../scss/_placeholders.scss */
+.slider {
+  border: 10px solid #fff;
+  -webkit-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
+  -moz-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
+  box-shadow: 0 0 4px rgba(88, 88, 88, 0.25); }
+
+/**
+* Import Partials
+*/
+/**
+* Header Styles
+*/
+/* line 6, ../scss/partials/_header.scss */
+#container > header {
+  text-align: center; }
+  /* line 8, ../scss/partials/_header.scss */
+  #container > header #brand {
+    margin: 54px 0; }
+    /* line 10, ../scss/partials/_header.scss */
+    #container > header #brand h1 {
+      text-transform: uppercase; }
+      /* line 12, ../scss/partials/_header.scss */
+      #container > header #brand h1 a {
+        text-decoration: none; }
+    /* line 19, ../scss/partials/_header.scss */
+    #container > header #brand #description {
+      font-style: italic; }
+  /* line 23, ../scss/partials/_header.scss */
+  #container > header > nav {
+    margin: 0 0 18px; }
+    /* line 25, ../scss/partials/_header.scss */
+    #container > header > nav ul {
+      font-size: 0; }
+      /* line 27, ../scss/partials/_header.scss */
+      #container > header > nav ul > li {
+        display: inline-block;
+        font-size: 12px; }
+        /* line 30, ../scss/partials/_header.scss */
+        #container > header > nav ul > li a {
+          display: block;
+          padding: 0 9px;
+          color: #241720;
+          font-weight: bold;
+          text-decoration: none;
+          text-transform: uppercase; }
+
+/**
 * General Selectors
 */
-/* line 41, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 body {
   background-color: #F5F5F5;
-  color: #555;
+  color: #241720;
   font: 12px/18px 'roboto', Arial, sans-serif; }
 
-/* line 47, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 h1 {
   font-size: 36px;
   line-height: 38px; }
 
-/* line 52, ../scss/style.scss */
+/* line 64, ../scss/style.scss */
 h2 {
   font-size: 24px;
   line-height: 26px; }
 
-/* line 57, ../scss/style.scss */
+/* line 69, ../scss/style.scss */
 h3 {
   font-size: 18px;
   line-height: 20px; }
 
-/* line 62, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 p {
   margin: 0 0 18px; }
 
-/* line 66, ../scss/style.scss */
+/* line 78, ../scss/style.scss */
 img {
   display: block;
   max-width: 100%;
   height: auto; }
 
-/* line 73, ../scss/style.scss */
+/* line 85, ../scss/style.scss */
 em,
 i {
   font-style: italic; }
 
-/* line 78, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 strong,
 b {
   font-weight: bold; }
 
-/* line 82, ../scss/style.scss */
+/* line 94, ../scss/style.scss */
 a {
   color: cornflowerblue; }
 
 /**
  * Layout
  */
-/* line 90, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 #container {
   margin: 0 auto;
   width: 980px; }
+
+/* line 107, ../scss/style.scss */
+.slider {
+  background-color: #fff; }
