@@ -97,6 +97,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: bold;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Genericons';
+  src: url("./assets/fonts/genericons/genericons-regular-webfont.eot");
+  src: url("./assets/fonts/genericons/genericons-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/genericons/genericons-regular-webfont.woff") format("woff"), url("./assets/fonts/genericons/genericons-regular-webfont.ttf") format("truetype"), url("./assets/fonts/genericons/genericons-regular-webfont.svg#genericonsregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+* Import Mixins
+*/
 /**
 * Import Placeholders
 */
@@ -146,63 +156,156 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           font-weight: bold;
           text-decoration: none;
           text-transform: uppercase; }
+          /* line 37, ../scss/partials/_header.scss */
+          #container > header > nav ul > li a:hover {
+            color: cornflowerblue; }
+
+/* line 2, ../scss/partials/_footer.scss */
+#container > footer {
+  margin: 18px 0 0 0;
+  font-size: 0; }
+  /* line 5, ../scss/partials/_footer.scss */
+  #container > footer .sosumi {
+    display: inline-block;
+    width: 50%;
+    font-size: 11px;
+    text-align: left; }
+  /* line 11, ../scss/partials/_footer.scss */
+  #container > footer .sharing {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    text-align: right; }
+    /* line 16, ../scss/partials/_footer.scss */
+    #container > footer .sharing > span {
+      display: inline-block;
+      margin: 0 5px 0;
+      vertical-align: middle;
+      font-size: 10px;
+      text-transform: uppercase; }
+    /* line 23, ../scss/partials/_footer.scss */
+    #container > footer .sharing a {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      color: #777; }
+      /* line 27, ../scss/partials/_footer.scss */
+      #container > footer .sharing a:last-child {
+        margin-right: 0; }
+      /* line 30, ../scss/partials/_footer.scss */
+      #container > footer .sharing a:before {
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font: normal 16px/1 'Genericons';
+        vertical-align: middle; }
+      /* line 34, ../scss/partials/_footer.scss */
+      #container > footer .sharing a.facebook:before {
+        content: '\f203'; }
+      /* line 39, ../scss/partials/_footer.scss */
+      #container > footer .sharing a.twitter:before {
+        content: '\f202'; }
+      /* line 44, ../scss/partials/_footer.scss */
+      #container > footer .sharing a.pinterest:before {
+        content: '\f209'; }
+      /* line 49, ../scss/partials/_footer.scss */
+      #container > footer .sharing a.instagram:before {
+        content: '\f215'; }
+
+/* line 1, ../scss/partials/_slider.scss */
+.slider {
+  background-color: #fff; }
+  /* line 4, ../scss/partials/_slider.scss */
+  .slider .bx-wrapper {
+    position: relative; }
+    /* line 7, ../scss/partials/_slider.scss */
+    .slider .bx-wrapper .bx-prev,
+    .slider .bx-wrapper .bx-next {
+      position: absolute;
+      top: 50%;
+      z-index: 51;
+      margin-top: -16px; }
+      /* line 12, ../scss/partials/_slider.scss */
+      .slider .bx-wrapper .bx-prev:after,
+      .slider .bx-wrapper .bx-next:after {
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font: normal 16px/1 'Genericons';
+        vertical-align: middle;
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        -moz-transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        -o-transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75); }
+      /* line 18, ../scss/partials/_slider.scss */
+      .slider .bx-wrapper .bx-prev:hover:after,
+      .slider .bx-wrapper .bx-next:hover:after {
+        color: black; }
+    /* line 22, ../scss/partials/_slider.scss */
+    .slider .bx-wrapper .bx-prev {
+      left: -60px; }
+      /* line 24, ../scss/partials/_slider.scss */
+      .slider .bx-wrapper .bx-prev:after {
+        content: '\f503'; }
+    /* line 28, ../scss/partials/_slider.scss */
+    .slider .bx-wrapper .bx-next {
+      right: -60px; }
+      /* line 30, ../scss/partials/_slider.scss */
+      .slider .bx-wrapper .bx-next:after {
+        content: '\f501'; }
 
 /**
 * General Selectors
 */
-/* line 53, ../scss/style.scss */
+/* line 64, ../scss/style.scss */
 body {
+  padding: 0 0 54px;
   background-color: #F5F5F5;
   color: #241720;
   font: 12px/18px 'roboto', Arial, sans-serif; }
 
-/* line 59, ../scss/style.scss */
+/* line 71, ../scss/style.scss */
 h1 {
   font-size: 36px;
   line-height: 38px; }
 
-/* line 64, ../scss/style.scss */
+/* line 76, ../scss/style.scss */
 h2 {
   font-size: 24px;
   line-height: 26px; }
 
-/* line 69, ../scss/style.scss */
+/* line 81, ../scss/style.scss */
 h3 {
   font-size: 18px;
   line-height: 20px; }
 
-/* line 74, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
 p {
   margin: 0 0 18px; }
 
-/* line 78, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 img {
   display: block;
   max-width: 100%;
   height: auto; }
 
-/* line 85, ../scss/style.scss */
+/* line 97, ../scss/style.scss */
 em,
 i {
   font-style: italic; }
 
-/* line 90, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 strong,
 b {
   font-weight: bold; }
 
-/* line 94, ../scss/style.scss */
+/* line 106, ../scss/style.scss */
 a {
   color: cornflowerblue; }
 
 /**
  * Layout
  */
-/* line 102, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 #container {
   margin: 0 auto;
   width: 980px; }
-
-/* line 107, ../scss/style.scss */
-.slider {
-  background-color: #fff; }

@@ -1,0 +1,35 @@
+.slider {
+	background-color: #fff;
+	@extend %frame;
+	.bx-wrapper {
+		position: relative;
+		.bx-prev,
+		.bx-next {
+			position: absolute;
+			top: 50%;
+			z-index: 51;
+			margin-top: - (32px / 2);
+			&:after {
+				@include genericon-rules;
+				font-size: 32px;
+				color: rgba(0, 0, 0, 0.5);
+				@include transition(all 250ms cubic-bezier(0.250, 0.250, 0.750, 0.750));
+			}
+			&:hover:after {
+				color: rgba(0, 0, 0, 1);
+			}
+		}
+		.bx-prev {
+			left: -60px;
+			&:after {
+				content: '\f503';
+			}
+		}
+		.bx-next {
+			right: -60px;
+			&:after {
+				content: '\f501';
+			}
+		}
+	}
+}

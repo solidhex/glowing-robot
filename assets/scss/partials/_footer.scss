@@ -1,0 +1,57 @@
+#container {
+	> footer {
+		margin: 18px 0 0 0;
+		font-size: 0;
+		.sosumi {
+			display: inline-block;
+			width: 50%;
+			font-size: 11px;
+			text-align: left;
+		}
+		.sharing {
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+			text-align: right;
+			> span {
+				display: inline-block;
+				margin: 0 5px 0;
+				vertical-align: middle;
+				font-size: 10px;
+				text-transform: uppercase;
+			}
+			a {
+				display: inline-block;
+				margin: 0 5px 0 0;
+				color: #777;
+				&:last-child {
+					margin-right: 0;
+				}
+				&:before {
+					@include genericon-rules;
+				}
+				&.facebook {
+					&:before {
+						content: '\f203';
+					}
+				}
+				&.twitter {
+					&:before {
+						content: '\f202';
+					}
+				}
+				&.pinterest {
+					&:before {
+						content: '\f209';
+					}
+				}
+				&.instagram {
+					&:before {
+						content: '\f215';
+					}
+				}
+			}
+		}
+	}
+}
+	

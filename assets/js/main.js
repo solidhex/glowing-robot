@@ -1,9 +1,33 @@
 // @codekit-prepend "util/plugin.js"
+// @codekit-prepend "vendor/jquery.bxslider.js"
 
-(function () {
+var App = App || {};
+
+(function ($) {
 	
 	"use strict";
 	
+	App.init = function () {
+		console.log("initialize the app");
+		this.setupSlider();
+	};
 	
-	
-}());
+	App.setupSlider = function () {
+		
+		var $slider = $(".slider > div");
+		
+		$slider.bxSlider({
+			mode: "fade",
+			pager: false,
+			//turn off text and use genericons
+			nextText: "",
+			prevText: ""
+		});
+
+	};
+
+	$(document).ready(function () {
+		App.init();
+	});
+
+})(jQuery);
