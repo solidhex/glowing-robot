@@ -8,7 +8,6 @@ var App = App || {};
 	"use strict";
 	
 	App.init = function () {
-		console.log("initialize the app");
 		this.setupSlider();
 	};
 	

@@ -86,4 +86,14 @@ function get_attached_images( $args=null )
 	}
 }
 
+/**
+ * Enable categories on pages
+ */
+
+//add_action( 'init', 'enable_category_taxonomy_for_pages', 500 );
+
+function enable_category_taxonomy_for_pages() {
+    register_taxonomy_for_object_type('category','page');
+}
+
 ?>
