@@ -4,17 +4,26 @@
 
 
 .grid {
+	//background-color: wheat;
 	@include pie-clearfix;
 	ul {
 		> li {
 			float: left;
 			cursor: pointer;
 			margin: 0 15px 15px 0;
+			margin-bottom: 15px;
 			position: relative;
 			width: 310px;
-			@extend %frame;
+			@include frame;
 			&:nth-child(3n+3) {
 				margin-right: 0;
+			}
+			@include respond-to('tablet') {
+				
+			}
+			@include respond-to('desktop') {
+/*				width: 310px;*/
+				
 			}
 			figure {
 				&:hover {

@@ -9,12 +9,6 @@ get_header();
 ?>
 
 <section class="grid">
-	<?php
-		// $images = get_attached_images( array( 'echo' => false ) );
-		// echo "<pre>";
-		// var_dump( $images );
-		// echo "</pre>";
-	?>
 	
 	<?php 
 	

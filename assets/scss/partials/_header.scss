@@ -27,6 +27,13 @@
 				> li {
 					display: inline-block;
 					font-size: 12px;
+					&.current_page_item,
+					&.current-page-ancestor
+					{
+						a {
+							color: $link-color;
+						}
+					}
 					a {
 						display: block;
 						padding: 0 9px;
@@ -34,7 +41,8 @@
 						font-weight: bold;
 						text-decoration: none;
 						text-transform: uppercase;
-						&:hover {
+						&:hover
+						{
 							color: $link-color;
 						}
 					}

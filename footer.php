@@ -5,8 +5,8 @@
 		</div>
 		<div class="sharing">
 			<span>Stay Connected</span>
-			<a href="" class="facebook"></a>
-			<a href="" class="twitter"></a>
+			<a href="https://apps.facebook.com/759034544149547" class="facebook"></a>
+			<a href="https://twitter.com/solidhex" class="twitter"></a>
 			<a href="" class="pinterest"></a>
 			<a href="" class="instagram"></a>
 		</div>

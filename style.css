@@ -14,7 +14,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /**
  * Import Compass
  */
-/* line 17, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -35,38 +35,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -110,13 +110,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /**
 * Import Placeholders
 */
-/* line 1, ../scss/_placeholders.scss */
-.slider, .grid ul > li {
-  border: 10px solid #fff;
-  -webkit-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
-  -moz-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
-  box-shadow: 0 0 4px rgba(88, 88, 88, 0.25); }
-
+/*%frame {
+	border: 10px solid #fff;
+	@include box-shadow(0 0 4px rgba(88,88,88,.25));
+}*/
 /**
 * Import Partials
 */
@@ -148,7 +145,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       #container > header > nav ul > li {
         display: inline-block;
         font-size: 12px; }
-        /* line 30, ../scss/partials/_header.scss */
+        /* line 33, ../scss/partials/_header.scss */
+        #container > header > nav ul > li.current_page_item a, #container > header > nav ul > li.current-page-ancestor a {
+          color: cornflowerblue; }
+        /* line 37, ../scss/partials/_header.scss */
         #container > header > nav ul > li a {
           display: block;
           padding: 0 9px;
@@ -156,7 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           font-weight: bold;
           text-decoration: none;
           text-transform: uppercase; }
-          /* line 37, ../scss/partials/_header.scss */
+          /* line 45, ../scss/partials/_header.scss */
           #container > header > nav ul > li a:hover {
             color: cornflowerblue; }
 
@@ -213,10 +213,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 1, ../scss/partials/_slider.scss */
 .slider {
   background-color: #fff; }
-  /* line 4, ../scss/partials/_slider.scss */
+  @media only screen and (min-width: 980px) {
+    /* line 1, ../scss/partials/_slider.scss */
+    .slider {
+      border: 10px solid #fff;
+      -webkit-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
+      -moz-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
+      box-shadow: 0 0 4px rgba(88, 88, 88, 0.25); } }
+  /* line 6, ../scss/partials/_slider.scss */
   .slider .bx-wrapper {
     position: relative; }
-    /* line 7, ../scss/partials/_slider.scss */
+    /* line 9, ../scss/partials/_slider.scss */
     .slider .bx-wrapper .bx-prev,
     .slider .bx-wrapper .bx-next {
       position: absolute;
@@ -230,20 +237,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       -moz-transition: margin 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
       -o-transition: margin 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
       transition: margin 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75); }
-    /* line 17, ../scss/partials/_slider.scss */
+      /* line 18, ../scss/partials/_slider.scss */
+      .slider .bx-wrapper .bx-prev.disabled,
+      .slider .bx-wrapper .bx-next.disabled {
+        display: none; }
+    /* line 22, ../scss/partials/_slider.scss */
     .slider .bx-wrapper .bx-prev {
       left: 0;
       background-position: 0 0; }
-      /* line 20, ../scss/partials/_slider.scss */
+      /* line 25, ../scss/partials/_slider.scss */
       .slider .bx-wrapper .bx-prev:hover {
         margin-left: -4px; }
-    /* line 24, ../scss/partials/_slider.scss */
+    /* line 29, ../scss/partials/_slider.scss */
     .slider .bx-wrapper .bx-next {
       right: 0;
       background-position: 0 -68px; }
-      /* line 27, ../scss/partials/_slider.scss */
+      /* line 32, ../scss/partials/_slider.scss */
       .slider .bx-wrapper .bx-next:hover {
         margin-right: -4px; }
+  /* line 37, ../scss/partials/_slider.scss */
+  .slider + aside {
+    text-align: center; }
+    /* line 39, ../scss/partials/_slider.scss */
+    .slider + aside h3 {
+      display: inline-block;
+      margin: 6px 0 0 0;
+      font-style: italic;
+      font-weight: bold; }
 
 /**
 * Import Views
@@ -254,25 +274,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 6, ../scss/views/_portfolio.scss */
 .grid {
   *zoom: 1; }
-  /* line 38, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .grid:after {
     content: "";
     display: table;
     clear: both; }
-  /* line 9, ../scss/views/_portfolio.scss */
+  /* line 10, ../scss/views/_portfolio.scss */
   .grid ul > li {
     float: left;
     cursor: pointer;
     margin: 0 15px 15px 0;
+    margin-bottom: 15px;
     position: relative;
-    width: 310px; }
-    /* line 16, ../scss/views/_portfolio.scss */
+    width: 310px;
+    border: 10px solid #fff;
+    -webkit-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
+    -moz-box-shadow: 0 0 4px rgba(88, 88, 88, 0.25);
+    box-shadow: 0 0 4px rgba(88, 88, 88, 0.25); }
+    /* line 18, ../scss/views/_portfolio.scss */
     .grid ul > li:nth-child(3n+3) {
       margin-right: 0; }
-    /* line 21, ../scss/views/_portfolio.scss */
+    @media only screen and (min-width: 980px) {
+      /* line 10, ../scss/views/_portfolio.scss */
+      .grid ul > li {
+        /*				width: 310px;*/ } }
+    /* line 30, ../scss/views/_portfolio.scss */
     .grid ul > li figure:hover figcaption {
       opacity: 1; }
-    /* line 25, ../scss/views/_portfolio.scss */
+    /* line 34, ../scss/views/_portfolio.scss */
     .grid ul > li figure figcaption {
       opacity: 0;
       position: absolute;
@@ -285,19 +314,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       -moz-transition: opacity 250ms cubic-bezier(0.42, 0, 0.58, 1);
       -o-transition: opacity 250ms cubic-bezier(0.42, 0, 0.58, 1);
       transition: opacity 250ms cubic-bezier(0.42, 0, 0.58, 1); }
-      /* line 34, ../scss/views/_portfolio.scss */
+      /* line 43, ../scss/views/_portfolio.scss */
       .grid ul > li figure figcaption section {
         display: table;
         height: 100%;
         width: 100%; }
-        /* line 38, ../scss/views/_portfolio.scss */
+        /* line 47, ../scss/views/_portfolio.scss */
         .grid ul > li figure figcaption section div {
           padding: 1em;
           color: #fff;
           display: table-cell;
           text-align: center;
           vertical-align: middle; }
-          /* line 44, ../scss/views/_portfolio.scss */
+          /* line 53, ../scss/views/_portfolio.scss */
           .grid ul > li figure figcaption section div p {
             font-style: italic;
             text-transform: capitalize; }
@@ -363,4 +392,9 @@ a {
 /* line 127, ../scss/style.scss */
 #container {
   margin: 0 auto;
-  width: 960px; }
+  width: 960px;
+  /*	width: 100%;*/ }
+  @media only screen and (min-width: 980px) {
+    /* line 127, ../scss/style.scss */
+    #container {
+      width: 960px; } }
